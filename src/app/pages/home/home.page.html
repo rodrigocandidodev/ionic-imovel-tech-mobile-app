@@ -1,0 +1,46 @@
+<ion-content >
+  <ion-grid>
+    <ion-row color="primary" class="ion-justify-content-center">
+      <ion-col class="ion-align-self-center" size-md="6" size-lg="5" size-xs="12">
+        <div class="top-title ion-text-center">
+          <h3>Calcular Preço de venda</h3>
+        </div>
+        <div class="ion-padding">
+            
+	        <ion-item>
+            <ion-label position="floating">Tamanho da casa em m<sup>2</sup></ion-label>
+	          <ion-input type="number" placeholder="Tamanho da casa" [(ngModel)]="sellingPriceAttributes.housesize" required></ion-input>
+	        </ion-item>
+	        <ion-item>
+            <ion-label position="floating">Quantidade de banheiros</ion-label>
+	          <ion-input type="number" placeholder="Banheiros" [(ngModel)]="sellingPriceAttributes.bathroom" required></ion-input>
+	        </ion-item>
+          <ion-item>
+            <ion-label position="floating">Possui Piscina?</ion-label>
+            <ion-select placeholder="Selecione" [(ngModel)]="sellingPriceAttributes.pool" required>
+              <ion-select-option value="1">Sim</ion-select-option>
+              <ion-select-option value="0">Não</ion-select-option>
+            </ion-select>
+          </ion-item>
+	        <ion-item>
+            <ion-label position="floating">Vagas na garagem</ion-label>
+	          <ion-input type="number" placeholder="Garagem" [(ngModel)]="sellingPriceAttributes.garage" required></ion-input>
+	        </ion-item>
+	      </div>
+	      <div class="ion-padding">
+	        <ion-button  size="large" type="submit" expand="block" (click)="calculateSellingPrice()">Calcular</ion-button>
+	      </div>
+        <div class="ion-padding ion-text-center">
+          <a (click)="logout()">Sair</a>
+        </div>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  <ion-grid>
+  	<ion-row class="ion-justify-content-center">
+  		<div class="ion-text-center">
+  			<small>ImovelTech App Copyright (c) ImovelTech</small>
+      	</div>
+  	</ion-row>
+  </ion-grid>
+</ion-content>
